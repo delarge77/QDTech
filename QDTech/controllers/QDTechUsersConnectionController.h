@@ -12,9 +12,6 @@ typedef void (^QDTCompletionHandler)(NSArray *response, NSError *error);
 
 @interface QDTechUsersConnectionController : NSObject
 
-+ (NSURLSessionTask *)loadUsersSession:(NSString *)sessionOption withCompletionHandler
-                                      :(QDTCompletionHandler)completionHandler;
-
 + (NSURLSessionTask *)loadUsersViewModelWithOption:(NSString *)sessionOption withCompletion
                                     :(QDTCompletionHandler)completionHandler;
 

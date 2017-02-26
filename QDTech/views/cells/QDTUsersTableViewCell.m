@@ -30,7 +30,7 @@
     // Configure the view for the selected state
 }
 
-- (void) configureCellLayoutWithUserModel:(QDTechUserItemViewModel *) userModel {
+- (void) configureCellLayoutWithUserModel:(QDTechUserItemViewModel *)userModel {
     self.nameLabel.text = userModel.name;
     self.usernameLabel.text = userModel.userName;
     self.emailLabel.text = userModel.email;

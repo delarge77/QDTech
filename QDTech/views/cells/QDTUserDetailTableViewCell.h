@@ -11,6 +11,6 @@
 
 @interface QDTUserDetailTableViewCell : UITableViewCell
 
-- (void) configureCellLayoutWithUserDetailModel:(QDTechUserDetail *) userDetail;
+- (void) configureCellLayoutWithUserDetail:(QDTechUserDetail *)userDetail;
 
 @end

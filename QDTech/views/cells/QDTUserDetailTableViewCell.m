@@ -28,9 +28,9 @@
     // Configure the view for the selected state
 }
 
-- (void) configureCellLayoutWithUserDetailModel:(QDTechUserDetail *) userDetailModel {
-    self.postTitleLabel.text = userDetailModel.title;
-    self.postDetailLabel.text = userDetailModel.body;
+- (void) configureCellLayoutWithUserDetail:(QDTechUserDetail *)userDetail {
+    self.postTitleLabel.text = userDetail.title;
+    self.postDetailLabel.text = userDetail.body;
 }
 
 

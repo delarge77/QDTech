@@ -63,9 +63,9 @@
     
     QDTUserDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    QDTechUserDetail *detailModel = self.userDetailModels[indexPath.row];
+    QDTechUserDetail *detail = self.userDetailModels[indexPath.row];
     
-    [cell configureCellLayoutWithUserDetailModel:detailModel];
+    [cell configureCellLayoutWithUserDetail:detail];
     
     return cell;
 }

@@ -11,6 +11,6 @@
 
 @interface QDTUsersTableViewCell : UITableViewCell
 
-- (void) configureCellLayoutWithUserModel:(QDTechUserItemViewModel *) userModel;
+- (void) configureCellLayoutWithUserModel:(QDTechUserItemViewModel *)userModel;
 
 @end

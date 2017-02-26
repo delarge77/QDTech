@@ -15,6 +15,32 @@
 
 @implementation QDTechUsersConnectionController
 
++ (NSURLSessionTask *)loadUsersViewModelWithOption:(NSString *)sessionOption withCompletion
+                                                  :(QDTCompletionHandler)completionHandler {
+    
+    return [QDTechUsersConnectionController loadUsersSession:sessionOption withCompletionHandler:^(NSArray *response, NSError *error) {
+        if (error) {
+            completionHandler(nil, error);
+        } else {
+            
+            NSMutableArray *viewModels = [NSMutableArray array];
+            
+            for (QDTechUser *user in response) {
+                
+                QDTechUserItemViewModel *viewModel = [[QDTechUserItemViewModel alloc] initWithUserItem:user];
+                
+                if (viewModel) {
+                    [viewModels addObject:viewModel];
+                }
+            }
+            
+            if (completionHandler) {
+                completionHandler([viewModels copy], nil);
+            }
+        }
+    }];
+}
+
 + (NSURLSessionTask *)loadUsersSession:(NSString *)sessionOption withCompletionHandler
                                       :(QDTCompletionHandler)completionHandler {
 
@@ -48,33 +74,6 @@
         
         if (completionHandler) completionHandler(nil, error);
         
-    }];
-}
-
-
-+ (NSURLSessionTask *)loadUsersViewModelWithOption:(NSString *)sessionOption withCompletion
-                                    :(QDTCompletionHandler)completionHandler {
-
-    return [QDTechUsersConnectionController loadUsersSession:sessionOption withCompletionHandler:^(NSArray *response, NSError *error) {
-        if (error) {
-            completionHandler(nil, error);
-        } else {
-            
-            NSMutableArray *viewModels = [NSMutableArray array];
-            
-            for (QDTechUser *user in response) {
-                
-                QDTechUserItemViewModel *viewModel = [[QDTechUserItemViewModel alloc] initWithUserItem:user];
-                
-                if (viewModel) {
-                    [viewModels addObject:viewModel];
-                }
-            }
-            
-            if (completionHandler) {
-                completionHandler([viewModels copy], nil);
-            }
-        }
     }];
 }
 
