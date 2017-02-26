@@ -6,13 +6,13 @@
 //  Copyright © 2017 Alessandro dos Santos Pinto. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "QDTechUsersViewController.h"
 
-@interface ViewController ()
+@interface QDTechUsersViewController ()
 
 @end
 
-@implementation ViewController
+@implementation QDTechUsersViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

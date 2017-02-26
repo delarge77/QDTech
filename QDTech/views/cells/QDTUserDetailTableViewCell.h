@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QDTUserDetailTableViewCell.h
 //  QDTech
 //
 //  Created by Alessandro dos santos pinto on 2/26/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface QDTUserDetailTableViewCell : UITableViewCell
 
 @end
-
