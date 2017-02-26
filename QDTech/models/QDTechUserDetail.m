@@ -10,4 +10,9 @@
 
 @implementation QDTechUserDetail
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{@"title" : @"title",
+             @"body" : @"body"};
+}
+
 @end

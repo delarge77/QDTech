@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QDTechUserItemViewModel.h"
+#import "QDTBaseViewController.h"
 
-@interface QDTechUserDetailViewController : UIViewController
+@interface QDTechUserDetailViewController : QDTBaseViewController
+
+@property (strong, nonatomic) QDTechUserItemViewModel *userModel;
 
 @end

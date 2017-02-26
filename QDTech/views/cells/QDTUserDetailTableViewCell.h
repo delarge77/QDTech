@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QDTechUserDetail.h"
 
 @interface QDTUserDetailTableViewCell : UITableViewCell
+
+- (void) configureCellLayoutWithUserDetailModel:(QDTechUserDetail *) userDetail;
 
 @end

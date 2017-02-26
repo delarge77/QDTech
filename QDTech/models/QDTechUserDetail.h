@@ -8,6 +8,16 @@
 
 #import <Mantle/Mantle.h>
 
-@interface QDTechUserDetail : MTLModel
+//{
+//    body = "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo";
+//    id = 20;
+//    title = "doloribus ad provident suscipit at";
+//    userId = 2;
+//}
+
+@interface QDTechUserDetail : MTLModel <MTLJSONSerializing>
+
+@property (nonatomic, copy, readonly) NSString *title;
+@property (nonatomic, copy, readonly) NSString *body;
 
 @end

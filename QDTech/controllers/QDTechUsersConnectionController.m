@@ -11,8 +11,7 @@
 #import "MTLJSONAdapter.h"
 #import "QDTechUser.h"
 #import "QDTechUserItemViewModel.h"
-
-NSString *QDTechConnectionControllerErrorDomain = @"com.qdtechtest:QDTechConnectionControllerErrorDomain";
+#import "NSError+QDTechError.h"
 
 @implementation QDTechUsersConnectionController
 
@@ -34,17 +33,17 @@ NSString *QDTechConnectionControllerErrorDomain = @"com.qdtechtest:QDTechConnect
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if ([error.domain isEqualToString:NSURLErrorDomain]) {
             
-            error = [self buildConnectionProblemError];
+            error = [NSError qdt_buildConnectionProblemError];
             if (completionHandler) completionHandler(nil, error);
             return;
         }
         
         NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
         if (response.statusCode >= 400 && response.statusCode <= 499) {
-            error = [self build400Error];
+            error = [NSError qdt_build400Error];
         }
         if (response.statusCode >= 500 && response.statusCode <= 599) {
-            error = [self build500Error];
+            error = [NSError qdt_build500Error];
         }
         
         if (completionHandler) completionHandler(nil, error);
@@ -53,12 +52,12 @@ NSString *QDTechConnectionControllerErrorDomain = @"com.qdtechtest:QDTechConnect
 }
 
 
-+ (void)loadUsersViewModelWithOption:(NSString *)sessionOption withCompletion
++ (NSURLSessionTask *)loadUsersViewModelWithOption:(NSString *)sessionOption withCompletion
                                     :(QDTCompletionHandler)completionHandler {
 
-    [QDTechUsersConnectionController loadUsersSession:sessionOption withCompletionHandler:^(NSArray *response, NSError *error) {
+    return [QDTechUsersConnectionController loadUsersSession:sessionOption withCompletionHandler:^(NSArray *response, NSError *error) {
         if (error) {
-            NSLog(@"%@", error.localizedDescription);
+            completionHandler(nil, error);
         } else {
             
             NSMutableArray *viewModels = [NSMutableArray array];
@@ -77,35 +76,6 @@ NSString *QDTechConnectionControllerErrorDomain = @"com.qdtechtest:QDTechConnect
             }
         }
     }];
-}
-
-
-+ (NSError *)buildConnectionProblemError {
-    NSDictionary *userInfo =
-    @{NSLocalizedDescriptionKey : NSLocalizedString(@"QDTechUsersViewController.buildConnectionProblemError", nil)};
-    
-    return [NSError errorWithDomain:QDTechConnectionControllerErrorDomain
-                               code:QDTechConnectionControllerErrorCodeConnectionProblem
-                           userInfo:userInfo];
-}
-
-+ (NSError *)build400Error {
-    NSDictionary *userInfo =
-    @{NSLocalizedDescriptionKey : NSLocalizedString(@"QDTechUsersViewController.build400Error", nil)};
-    
-    return [NSError errorWithDomain:QDTechConnectionControllerErrorDomain
-                               code:QDTechConnectionControllerErrorCodeBadRequest
-                           userInfo:userInfo];
-}
-
-+ (NSError *)build500Error {
-    NSDictionary *userInfo =
-    @{NSLocalizedDescriptionKey :
-          NSLocalizedString(@"QDTechUsersViewController.build500Error", nil)};
-    
-    return [NSError errorWithDomain:QDTechConnectionControllerErrorDomain
-                               code:QDTechConnectionControllerErrorCodeServerError
-                           userInfo:userInfo];
 }
 
 @end

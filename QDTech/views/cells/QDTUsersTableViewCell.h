@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QDTechUserItemViewModel.h"
 
 @interface QDTUsersTableViewCell : UITableViewCell
+
+- (void) configureCellLayoutWithUserModel:(QDTechUserItemViewModel *) userModel;
 
 @end

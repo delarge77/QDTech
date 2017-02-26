@@ -8,6 +8,10 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+extern NSString *QDTechClientURL;
+
 @interface QDTechConnectionClient : AFHTTPSessionManager
+
++ (instancetype)sharedClient;
 
 @end

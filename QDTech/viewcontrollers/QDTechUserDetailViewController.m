@@ -7,8 +7,13 @@
 //
 
 #import "QDTechUserDetailViewController.h"
+#import "QDTechUserDetailConnectionController.h"
+#import "QDTechUserDetail.h"
+#import "QDTUserDetailTableViewCell.h"
 
 @interface QDTechUserDetailViewController ()
+
+@property (strong, nonatomic) NSArray *userDetailModels;
 
 @end
 
@@ -16,22 +21,53 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = self.userModel.name;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    typeof(self) weakSelf = self;
+    [self showLoadingMessage:NSLocalizedString(@"QDTechUsersViewController.LoadingResults", nil)];
+    
+    [QDTechUserDetailConnectionController loadUserDetailWithSessionOption:self.userModel.paramDetail withCompletionHandler:^(NSArray *response, NSError *error) {
+        [weakSelf dismissHud];
+        
+        if (error) {
+            [self presentError:error inView:self.view];
+            return;
+        }
+        
+        weakSelf.userDetailModels = response;
+        [weakSelf.tableView reloadData];
+        
+        weakSelf.tableView.estimatedRowHeight = 120.0f;
+        weakSelf.tableView.rowHeight = UITableViewAutomaticDimension;
+ 
+    }];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UITableViewDatasource Methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.userDetailModels.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"cellIdentifier";
+    
+    QDTUserDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    QDTechUserDetail *detailModel = self.userDetailModels[indexPath.row];
+    
+    [cell configureCellLayoutWithUserDetailModel:detailModel];
+    
+    return cell;
+}
 
 @end

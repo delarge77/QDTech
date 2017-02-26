@@ -7,14 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4282F77354AD9D7FAE3CA005 /* libPods-QDTechUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9875C7FA817E9BDB30E117 /* libPods-QDTechUITests.a */; };
+		6AF028E2A6E455E2990A084A /* libPods-QDTechTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 992F261AA3B31F3A42F36919 /* libPods-QDTechTests.a */; };
 		8733DB291E63135600F4ECEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB281E63135600F4ECEE /* main.m */; };
 		8733DB2C1E63135600F4ECEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB2B1E63135600F4ECEE /* AppDelegate.m */; };
-		8733DB2F1E63135600F4ECEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB2E1E63135600F4ECEE /* ViewController.m */; };
+		8733DB2F1E63135600F4ECEE /* QDTechUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB2E1E63135600F4ECEE /* QDTechUsersViewController.m */; };
 		8733DB321E63135600F4ECEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8733DB301E63135600F4ECEE /* Main.storyboard */; };
 		8733DB341E63135600F4ECEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8733DB331E63135600F4ECEE /* Assets.xcassets */; };
 		8733DB371E63135600F4ECEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8733DB351E63135600F4ECEE /* LaunchScreen.storyboard */; };
 		8733DB421E63135600F4ECEE /* QDTechTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB411E63135600F4ECEE /* QDTechTests.m */; };
 		8733DB4D1E63135600F4ECEE /* QDTechUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB4C1E63135600F4ECEE /* QDTechUITests.m */; };
+		8733DB611E63190500F4ECEE /* QDTechConnectionClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB601E63190500F4ECEE /* QDTechConnectionClient.m */; };
+		8733DB641E631B2900F4ECEE /* QDTechUsersConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB631E631B2900F4ECEE /* QDTechUsersConnectionController.m */; };
+		8733DB691E6325F900F4ECEE /* QDTechModelConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB681E6325F900F4ECEE /* QDTechModelConverter.m */; };
+		8733DB6C1E6326BA00F4ECEE /* QDTechUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB6B1E6326BA00F4ECEE /* QDTechUser.m */; };
+		8733DB6F1E632D2A00F4ECEE /* QDTechUserAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB6E1E632D2A00F4ECEE /* QDTechUserAddress.m */; };
+		8733DB731E633B2000F4ECEE /* QDTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB721E633B2000F4ECEE /* QDTBaseViewController.m */; };
+		8733DB771E633DA500F4ECEE /* QDTUsersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB761E633DA500F4ECEE /* QDTUsersTableViewCell.m */; };
+		8733DB7B1E63468800F4ECEE /* QDTechUserItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB7A1E63468800F4ECEE /* QDTechUserItemViewModel.m */; };
+		8733DB7E1E634EB400F4ECEE /* QDTechUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB7D1E634EB400F4ECEE /* QDTechUserDetailViewController.m */; };
+		8733DB811E635B2800F4ECEE /* QDTechUserDetailConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB801E635B2800F4ECEE /* QDTechUserDetailConnectionController.m */; };
+		8733DB841E635CF100F4ECEE /* QDTechUserDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB831E635CF100F4ECEE /* QDTechUserDetail.m */; };
+		8733DB871E63610D00F4ECEE /* QDTUserDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB861E63610D00F4ECEE /* QDTUserDetailTableViewCell.m */; };
+		8733DB8B1E63661F00F4ECEE /* NSError+QDTechError.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB8A1E63661F00F4ECEE /* NSError+QDTechError.m */; };
+		DBE092F7EB7D63B03230E98C /* libPods-QDTech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F73942D5796A9E2166E7E6F /* libPods-QDTech.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CEEABD6ED8E9F6C7E12D74A /* Pods-QDTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QDTech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QDTech/Pods-QDTech.debug.xcconfig"; sourceTree = "<group>"; };
+		30D9C5FA51748A86B3FC5468 /* Pods-QDTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QDTech.release.xcconfig"; path = "Pods/Target Support Files/Pods-QDTech/Pods-QDTech.release.xcconfig"; sourceTree = "<group>"; };
+		43536467BC8A94581E8F40A7 /* Pods-QDTechTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QDTechTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QDTechTests/Pods-QDTechTests.release.xcconfig"; sourceTree = "<group>"; };
+		6C9875C7FA817E9BDB30E117 /* libPods-QDTechUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QDTechUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8733DB241E63135600F4ECEE /* QDTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QDTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8733DB281E63135600F4ECEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8733DB2A1E63135600F4ECEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8733DB2B1E63135600F4ECEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8733DB2D1E63135600F4ECEE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8733DB2E1E63135600F4ECEE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8733DB2A1E63135600F4ECEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = application/AppDelegate.h; sourceTree = "<group>"; };
+		8733DB2B1E63135600F4ECEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = application/AppDelegate.m; sourceTree = "<group>"; };
+		8733DB2D1E63135600F4ECEE /* QDTechUsersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QDTechUsersViewController.h; path = viewcontrollers/QDTechUsersViewController.h; sourceTree = "<group>"; };
+		8733DB2E1E63135600F4ECEE /* QDTechUsersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QDTechUsersViewController.m; path = viewcontrollers/QDTechUsersViewController.m; sourceTree = "<group>"; };
 		8733DB311E63135600F4ECEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8733DB331E63135600F4ECEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8733DB361E63135600F4ECEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +71,37 @@
 		8733DB481E63135600F4ECEE /* QDTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QDTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8733DB4C1E63135600F4ECEE /* QDTechUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QDTechUITests.m; sourceTree = "<group>"; };
 		8733DB4E1E63135600F4ECEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8733DB5F1E63190500F4ECEE /* QDTechConnectionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechConnectionClient.h; path = controllers/client/QDTechConnectionClient.h; sourceTree = "<group>"; };
+		8733DB601E63190500F4ECEE /* QDTechConnectionClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechConnectionClient.m; path = controllers/client/QDTechConnectionClient.m; sourceTree = "<group>"; };
+		8733DB621E631B2900F4ECEE /* QDTechUsersConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechUsersConnectionController.h; path = controllers/QDTechUsersConnectionController.h; sourceTree = "<group>"; };
+		8733DB631E631B2900F4ECEE /* QDTechUsersConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUsersConnectionController.m; path = controllers/QDTechUsersConnectionController.m; sourceTree = "<group>"; };
+		8733DB671E6325F900F4ECEE /* QDTechModelConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechModelConverter.h; path = models/converter/QDTechModelConverter.h; sourceTree = "<group>"; };
+		8733DB681E6325F900F4ECEE /* QDTechModelConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechModelConverter.m; path = models/converter/QDTechModelConverter.m; sourceTree = "<group>"; };
+		8733DB6A1E6326BA00F4ECEE /* QDTechUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechUser.h; path = models/QDTechUser.h; sourceTree = "<group>"; };
+		8733DB6B1E6326BA00F4ECEE /* QDTechUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUser.m; path = models/QDTechUser.m; sourceTree = "<group>"; };
+		8733DB6D1E632D2A00F4ECEE /* QDTechUserAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechUserAddress.h; path = models/QDTechUserAddress.h; sourceTree = "<group>"; };
+		8733DB6E1E632D2A00F4ECEE /* QDTechUserAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUserAddress.m; path = models/QDTechUserAddress.m; sourceTree = "<group>"; };
+		8733DB711E633B2000F4ECEE /* QDTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTBaseViewController.h; path = viewcontrollers/QDTBaseViewController/QDTBaseViewController.h; sourceTree = "<group>"; };
+		8733DB721E633B2000F4ECEE /* QDTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTBaseViewController.m; path = viewcontrollers/QDTBaseViewController/QDTBaseViewController.m; sourceTree = "<group>"; };
+		8733DB751E633DA500F4ECEE /* QDTUsersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTUsersTableViewCell.h; path = views/cells/QDTUsersTableViewCell.h; sourceTree = "<group>"; };
+		8733DB761E633DA500F4ECEE /* QDTUsersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTUsersTableViewCell.m; path = views/cells/QDTUsersTableViewCell.m; sourceTree = "<group>"; };
+		8733DB791E63468800F4ECEE /* QDTechUserItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechUserItemViewModel.h; path = viewmodels/QDTechUserItemViewModel.h; sourceTree = "<group>"; };
+		8733DB7A1E63468800F4ECEE /* QDTechUserItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUserItemViewModel.m; path = viewmodels/QDTechUserItemViewModel.m; sourceTree = "<group>"; };
+		8733DB7C1E634EB400F4ECEE /* QDTechUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechUserDetailViewController.h; path = viewcontrollers/QDTechUserDetailViewController.h; sourceTree = "<group>"; };
+		8733DB7D1E634EB400F4ECEE /* QDTechUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUserDetailViewController.m; path = viewcontrollers/QDTechUserDetailViewController.m; sourceTree = "<group>"; };
+		8733DB7F1E635B2800F4ECEE /* QDTechUserDetailConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechUserDetailConnectionController.h; path = controllers/QDTechUserDetailConnectionController.h; sourceTree = "<group>"; };
+		8733DB801E635B2800F4ECEE /* QDTechUserDetailConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUserDetailConnectionController.m; path = controllers/QDTechUserDetailConnectionController.m; sourceTree = "<group>"; };
+		8733DB821E635CF100F4ECEE /* QDTechUserDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTechUserDetail.h; path = models/QDTechUserDetail.h; sourceTree = "<group>"; };
+		8733DB831E635CF100F4ECEE /* QDTechUserDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUserDetail.m; path = models/QDTechUserDetail.m; sourceTree = "<group>"; };
+		8733DB851E63610D00F4ECEE /* QDTUserDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDTUserDetailTableViewCell.h; path = views/cells/QDTUserDetailTableViewCell.h; sourceTree = "<group>"; };
+		8733DB861E63610D00F4ECEE /* QDTUserDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTUserDetailTableViewCell.m; path = views/cells/QDTUserDetailTableViewCell.m; sourceTree = "<group>"; };
+		8733DB891E63661F00F4ECEE /* NSError+QDTechError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+QDTechError.h"; path = "categories/NSError+QDTechError.h"; sourceTree = "<group>"; };
+		8733DB8A1E63661F00F4ECEE /* NSError+QDTechError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+QDTechError.m"; path = "categories/NSError+QDTechError.m"; sourceTree = "<group>"; };
+		8F73942D5796A9E2166E7E6F /* libPods-QDTech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QDTech.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		992F261AA3B31F3A42F36919 /* libPods-QDTechTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QDTechTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C77AF49D149D9E402496E0B /* Pods-QDTechUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QDTechUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QDTechUITests/Pods-QDTechUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BCBA27FCB56CB7C2A88F7620 /* Pods-QDTechTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QDTechTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QDTechTests/Pods-QDTechTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D65D6CB53B08D549B635CF9B /* Pods-QDTechUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QDTechUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QDTechUITests/Pods-QDTechUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE092F7EB7D63B03230E98C /* libPods-QDTech.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF028E2A6E455E2990A084A /* libPods-QDTechTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +125,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4282F77354AD9D7FAE3CA005 /* libPods-QDTechUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BCEE6BD0CCF0BC24D1DF4AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CEEABD6ED8E9F6C7E12D74A /* Pods-QDTech.debug.xcconfig */,
+				30D9C5FA51748A86B3FC5468 /* Pods-QDTech.release.xcconfig */,
+				BCBA27FCB56CB7C2A88F7620 /* Pods-QDTechTests.debug.xcconfig */,
+				43536467BC8A94581E8F40A7 /* Pods-QDTechTests.release.xcconfig */,
+				D65D6CB53B08D549B635CF9B /* Pods-QDTechUITests.debug.xcconfig */,
+				9C77AF49D149D9E402496E0B /* Pods-QDTechUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8733DB1B1E63135500F4ECEE = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +152,8 @@
 				8733DB401E63135600F4ECEE /* QDTechTests */,
 				8733DB4B1E63135600F4ECEE /* QDTechUITests */,
 				8733DB251E63135600F4ECEE /* Products */,
+				2BCEE6BD0CCF0BC24D1DF4AA /* Pods */,
+				9D59BA35A5140F66C2F42322 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +170,14 @@
 		8733DB261E63135600F4ECEE /* QDTech */ = {
 			isa = PBXGroup;
 			children = (
-				8733DB2A1E63135600F4ECEE /* AppDelegate.h */,
-				8733DB2B1E63135600F4ECEE /* AppDelegate.m */,
-				8733DB2D1E63135600F4ECEE /* ViewController.h */,
-				8733DB2E1E63135600F4ECEE /* ViewController.m */,
-				8733DB301E63135600F4ECEE /* Main.storyboard */,
+				8733DB881E6364C700F4ECEE /* categories */,
+				8733DB781E63464700F4ECEE /* viewmodels */,
+				8733DB651E63258700F4ECEE /* models */,
+				8733DB5D1E6318AC00F4ECEE /* controllers */,
+				8733DB5B1E63161C00F4ECEE /* application */,
+				8733DB5A1E6314CB00F4ECEE /* viewcontrollers */,
+				8733DB5C1E63165400F4ECEE /* views */,
 				8733DB331E63135600F4ECEE /* Assets.xcassets */,
-				8733DB351E63135600F4ECEE /* LaunchScreen.storyboard */,
-				8733DB381E63135600F4ECEE /* Info.plist */,
 				8733DB271E63135600F4ECEE /* Supporting Files */,
 			);
 			path = QDTech;
@@ -117,6 +186,7 @@
 		8733DB271E63135600F4ECEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8733DB381E63135600F4ECEE /* Info.plist */,
 				8733DB281E63135600F4ECEE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -140,6 +210,129 @@
 			path = QDTechUITests;
 			sourceTree = "<group>";
 		};
+		8733DB5A1E6314CB00F4ECEE /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB701E633AE100F4ECEE /* QDTBaseViewController */,
+				8733DB2D1E63135600F4ECEE /* QDTechUsersViewController.h */,
+				8733DB2E1E63135600F4ECEE /* QDTechUsersViewController.m */,
+				8733DB7C1E634EB400F4ECEE /* QDTechUserDetailViewController.h */,
+				8733DB7D1E634EB400F4ECEE /* QDTechUserDetailViewController.m */,
+			);
+			name = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		8733DB5B1E63161C00F4ECEE /* application */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB2A1E63135600F4ECEE /* AppDelegate.h */,
+				8733DB2B1E63135600F4ECEE /* AppDelegate.m */,
+			);
+			name = application;
+			sourceTree = "<group>";
+		};
+		8733DB5C1E63165400F4ECEE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB741E633D6400F4ECEE /* cells */,
+				8733DB301E63135600F4ECEE /* Main.storyboard */,
+				8733DB351E63135600F4ECEE /* LaunchScreen.storyboard */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		8733DB5D1E6318AC00F4ECEE /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB5E1E6318BF00F4ECEE /* client */,
+				8733DB621E631B2900F4ECEE /* QDTechUsersConnectionController.h */,
+				8733DB631E631B2900F4ECEE /* QDTechUsersConnectionController.m */,
+				8733DB7F1E635B2800F4ECEE /* QDTechUserDetailConnectionController.h */,
+				8733DB801E635B2800F4ECEE /* QDTechUserDetailConnectionController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		8733DB5E1E6318BF00F4ECEE /* client */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB5F1E63190500F4ECEE /* QDTechConnectionClient.h */,
+				8733DB601E63190500F4ECEE /* QDTechConnectionClient.m */,
+			);
+			name = client;
+			sourceTree = "<group>";
+		};
+		8733DB651E63258700F4ECEE /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB661E6325C300F4ECEE /* converter */,
+				8733DB6A1E6326BA00F4ECEE /* QDTechUser.h */,
+				8733DB6B1E6326BA00F4ECEE /* QDTechUser.m */,
+				8733DB6D1E632D2A00F4ECEE /* QDTechUserAddress.h */,
+				8733DB6E1E632D2A00F4ECEE /* QDTechUserAddress.m */,
+				8733DB821E635CF100F4ECEE /* QDTechUserDetail.h */,
+				8733DB831E635CF100F4ECEE /* QDTechUserDetail.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		8733DB661E6325C300F4ECEE /* converter */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB671E6325F900F4ECEE /* QDTechModelConverter.h */,
+				8733DB681E6325F900F4ECEE /* QDTechModelConverter.m */,
+			);
+			name = converter;
+			sourceTree = "<group>";
+		};
+		8733DB701E633AE100F4ECEE /* QDTBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB711E633B2000F4ECEE /* QDTBaseViewController.h */,
+				8733DB721E633B2000F4ECEE /* QDTBaseViewController.m */,
+			);
+			name = QDTBaseViewController;
+			sourceTree = "<group>";
+		};
+		8733DB741E633D6400F4ECEE /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB751E633DA500F4ECEE /* QDTUsersTableViewCell.h */,
+				8733DB761E633DA500F4ECEE /* QDTUsersTableViewCell.m */,
+				8733DB851E63610D00F4ECEE /* QDTUserDetailTableViewCell.h */,
+				8733DB861E63610D00F4ECEE /* QDTUserDetailTableViewCell.m */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		8733DB781E63464700F4ECEE /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB791E63468800F4ECEE /* QDTechUserItemViewModel.h */,
+				8733DB7A1E63468800F4ECEE /* QDTechUserItemViewModel.m */,
+			);
+			name = viewmodels;
+			sourceTree = "<group>";
+		};
+		8733DB881E6364C700F4ECEE /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				8733DB891E63661F00F4ECEE /* NSError+QDTechError.h */,
+				8733DB8A1E63661F00F4ECEE /* NSError+QDTechError.m */,
+			);
+			name = categories;
+			sourceTree = "<group>";
+		};
+		9D59BA35A5140F66C2F42322 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F73942D5796A9E2166E7E6F /* libPods-QDTech.a */,
+				992F261AA3B31F3A42F36919 /* libPods-QDTechTests.a */,
+				6C9875C7FA817E9BDB30E117 /* libPods-QDTechUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +340,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8733DB511E63135600F4ECEE /* Build configuration list for PBXNativeTarget "QDTech" */;
 			buildPhases = (
+				15B3B2A5F0FB2F23C20E4954 /* [CP] Check Pods Manifest.lock */,
 				8733DB201E63135500F4ECEE /* Sources */,
 				8733DB211E63135500F4ECEE /* Frameworks */,
 				8733DB221E63135500F4ECEE /* Resources */,
+				6C50DE0CFC86BEAB623C9780 /* [CP] Embed Pods Frameworks */,
+				0E906539E7B92E3310623A4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8733DB541E63135600F4ECEE /* Build configuration list for PBXNativeTarget "QDTechTests" */;
 			buildPhases = (
+				A9999D2AA1B6A73A4BF91D88 /* [CP] Check Pods Manifest.lock */,
 				8733DB391E63135600F4ECEE /* Sources */,
 				8733DB3A1E63135600F4ECEE /* Frameworks */,
 				8733DB3B1E63135600F4ECEE /* Resources */,
+				94DF9909B60F70F7E0885CE7 /* [CP] Embed Pods Frameworks */,
+				1B254B757E9A737E897FDB81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +381,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8733DB571E63135600F4ECEE /* Build configuration list for PBXNativeTarget "QDTechUITests" */;
 			buildPhases = (
+				769D7E022E5B17E871EF1FB4 /* [CP] Check Pods Manifest.lock */,
 				8733DB441E63135600F4ECEE /* Sources */,
 				8733DB451E63135600F4ECEE /* Frameworks */,
 				8733DB461E63135600F4ECEE /* Resources */,
+				096AC5E3431B59693C214003 /* [CP] Embed Pods Frameworks */,
+				C1027614977E86066E88F0F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +404,7 @@
 		8733DB1C1E63135500F4ECEE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = QDTech;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Alessandro dos Santos Pinto";
 				TargetAttributes = {
@@ -271,14 +474,165 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		096AC5E3431B59693C214003 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QDTechUITests/Pods-QDTechUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E906539E7B92E3310623A4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QDTech/Pods-QDTech-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15B3B2A5F0FB2F23C20E4954 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1B254B757E9A737E897FDB81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QDTechTests/Pods-QDTechTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C50DE0CFC86BEAB623C9780 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QDTech/Pods-QDTech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		769D7E022E5B17E871EF1FB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94DF9909B60F70F7E0885CE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QDTechTests/Pods-QDTechTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9999D2AA1B6A73A4BF91D88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1027614977E86066E88F0F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QDTechUITests/Pods-QDTechUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8733DB201E63135500F4ECEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8733DB2F1E63135600F4ECEE /* ViewController.m in Sources */,
+				8733DB771E633DA500F4ECEE /* QDTUsersTableViewCell.m in Sources */,
+				8733DB641E631B2900F4ECEE /* QDTechUsersConnectionController.m in Sources */,
+				8733DB691E6325F900F4ECEE /* QDTechModelConverter.m in Sources */,
+				8733DB2F1E63135600F4ECEE /* QDTechUsersViewController.m in Sources */,
+				8733DB731E633B2000F4ECEE /* QDTBaseViewController.m in Sources */,
+				8733DB6C1E6326BA00F4ECEE /* QDTechUser.m in Sources */,
+				8733DB841E635CF100F4ECEE /* QDTechUserDetail.m in Sources */,
+				8733DB7B1E63468800F4ECEE /* QDTechUserItemViewModel.m in Sources */,
+				8733DB6F1E632D2A00F4ECEE /* QDTechUserAddress.m in Sources */,
+				8733DB8B1E63661F00F4ECEE /* NSError+QDTechError.m in Sources */,
 				8733DB2C1E63135600F4ECEE /* AppDelegate.m in Sources */,
+				8733DB811E635B2800F4ECEE /* QDTechUserDetailConnectionController.m in Sources */,
 				8733DB291E63135600F4ECEE /* main.m in Sources */,
+				8733DB7E1E634EB400F4ECEE /* QDTechUserDetailViewController.m in Sources */,
+				8733DB611E63190500F4ECEE /* QDTechConnectionClient.m in Sources */,
+				8733DB871E63610D00F4ECEE /* QDTUserDetailTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +779,7 @@
 		};
 		8733DB521E63135600F4ECEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CEEABD6ED8E9F6C7E12D74A /* Pods-QDTech.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
@@ -437,6 +792,7 @@
 		};
 		8733DB531E63135600F4ECEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30D9C5FA51748A86B3FC5468 /* Pods-QDTech.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
@@ -449,6 +805,7 @@
 		};
 		8733DB551E63135600F4ECEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCBA27FCB56CB7C2A88F7620 /* Pods-QDTechTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
@@ -462,6 +819,7 @@
 		};
 		8733DB561E63135600F4ECEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43536467BC8A94581E8F40A7 /* Pods-QDTechTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
@@ -475,6 +833,7 @@
 		};
 		8733DB581E63135600F4ECEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D65D6CB53B08D549B635CF9B /* Pods-QDTechUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
 				INFOPLIST_FILE = QDTechUITests/Info.plist;
@@ -487,6 +846,7 @@
 		};
 		8733DB591E63135600F4ECEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C77AF49D149D9E402496E0B /* Pods-QDTechUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = LZASXEKJ7F;
 				INFOPLIST_FILE = QDTechUITests/Info.plist;
@@ -516,6 +876,7 @@
 				8733DB531E63135600F4ECEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8733DB541E63135600F4ECEE /* Build configuration list for PBXNativeTarget "QDTechTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +885,7 @@
 				8733DB561E63135600F4ECEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8733DB571E63135600F4ECEE /* Build configuration list for PBXNativeTarget "QDTechUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +894,7 @@
 				8733DB591E63135600F4ECEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,6 +9,8 @@
 #import "QDTechUserDetailConnectionController.h"
 #import "QDTechConnectionClient.h"
 #import "MTLJSONAdapter.h"
+#import "QDTechUserDetail.h"
+#import "NSError+QDTechError.h"
 
 @implementation QDTechUserDetailConnectionController
 
@@ -22,29 +24,28 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSError *error = nil;
         id jsonResponse = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
-        NSLog(@"%@", jsonResponse);
-//        NSArray *result = [MTLJSONAdapter modelsOfClass:[QDTechUser class]
-//                                          fromJSONArray:jsonResponse
-//                                                  error:&error];
-//        if (completionHandler) completionHandler(result, nil);
+        NSArray *result = [MTLJSONAdapter modelsOfClass:[QDTechUserDetail class]
+                                          fromJSONArray:jsonResponse
+                                                  error:&error];
+        if (completionHandler) completionHandler(result, nil);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if ([error.domain isEqualToString:NSURLErrorDomain]) {
             
-//            error = [self buildConnectionProblemError];
-//            if (completionHandler) completionHandler(nil, error);
-//            return;
+            error = [NSError qdt_buildConnectionProblemError];
+            if (completionHandler) completionHandler(nil, error);
+            return;
         }
         
-//        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-//        if (response.statusCode >= 400 && response.statusCode <= 499) {
-//            error = [self build400Error];
-//        }
-//        if (response.statusCode >= 500 && response.statusCode <= 599) {
-//            error = [self build500Error];
-//        }
-//        
-//        if (completionHandler) completionHandler(nil, error);
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        if (response.statusCode >= 400 && response.statusCode <= 499) {
+            error = [NSError qdt_build400Error];
+        }
+        if (response.statusCode >= 500 && response.statusCode <= 599) {
+            error = [NSError qdt_build500Error];
+        }
+        
+        if (completionHandler) completionHandler(nil, error);
         
     }];
 }

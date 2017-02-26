@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *QDTechConnectionControllerErrorDomain;
+
+typedef NS_ENUM(NSUInteger, QDTechConnectionControllerErrorCode) {
+    QDTechConnectionControllerErrorCodeConnectionProblem,
+    QDTechConnectionControllerErrorCodeBadRequest,
+    QDTechConnectionControllerErrorCodeServerError,
+};
+
 @interface NSError (QDTechError)
+
++ (NSError *)qdt_buildConnectionProblemError;
++ (NSError *)qdt_build400Error;
++ (NSError *)qdt_build500Error;
 
 @end

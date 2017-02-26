@@ -8,6 +8,15 @@
 
 #import "QDTUsersTableViewCell.h"
 
+@interface QDTUsersTableViewCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+
+@end
+
 @implementation QDTUsersTableViewCell
 
 - (void)awakeFromNib {
@@ -19,6 +28,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void) configureCellLayoutWithUserModel:(QDTechUserItemViewModel *) userModel {
+    self.nameLabel.text = userModel.name;
+    self.usernameLabel.text = userModel.userName;
+    self.emailLabel.text = userModel.email;
+    self.addressLabel.text = userModel.address;
 }
 
 @end

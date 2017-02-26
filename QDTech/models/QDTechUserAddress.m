@@ -10,4 +10,35 @@
 
 @implementation QDTechUserAddress
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{@"street" : @"street",
+             @"suite" : @"suite",
+             @"city" : @"city",
+             @"zipcode" : @"zipcode",
+             @"latitude" : @"geo.lat",
+             @"longitude" : @"geo.lng"};
+}
+
++ (NSValueTransformer *) latitudeJSONTransformer
+{
+    return [self floatTransformer];
+}
+
++ (NSValueTransformer *) longitudeJSONTransformer
+{
+    return [self floatTransformer];
+}
+
++ (NSValueTransformer<MTLTransformerErrorHandling> *)floatTransformer {
+    return [MTLValueTransformer
+            transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
+                if ([value isKindOfClass:[NSString class]]) {
+                    return @([value floatValue]);
+                }
+                return value;
+            } reverseBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
+                return value;
+            }];
+}
+
 @end

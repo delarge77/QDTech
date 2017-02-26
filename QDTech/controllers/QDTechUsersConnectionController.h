@@ -8,22 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString *QDTechConnectionControllerErrorDomain;
-
 typedef void (^QDTCompletionHandler)(NSArray *response, NSError *error);
-
-typedef NS_ENUM(NSUInteger, QDTechConnectionControllerErrorCode) {
-    QDTechConnectionControllerErrorCodeConnectionProblem,
-    QDTechConnectionControllerErrorCodeBadRequest,
-    QDTechConnectionControllerErrorCodeServerError,
-};
 
 @interface QDTechUsersConnectionController : NSObject
 
 + (NSURLSessionTask *)loadUsersSession:(NSString *)sessionOption withCompletionHandler
                                       :(QDTCompletionHandler)completionHandler;
 
-+ (void)loadUsersViewModelWithOption:(NSString *)sessionOption withCompletion
++ (NSURLSessionTask *)loadUsersViewModelWithOption:(NSString *)sessionOption withCompletion
                                     :(QDTCompletionHandler)completionHandler;
 
 @end
