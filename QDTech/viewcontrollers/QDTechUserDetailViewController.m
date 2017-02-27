@@ -29,7 +29,7 @@
     [super viewWillAppear:animated];
     
     typeof(self) weakSelf = self;
-    [self showLoadingMessage:NSLocalizedString(@"QDTechUsersViewController.LoadingResults", nil)];
+    [self showLoadingMessage:NSLocalizedString(@"QDTechUserDetailViewController.LoadingDetailResults", nil)];
     
     [QDTechUserDetailConnectionController loadUserDetailWithSessionOption:self.userModel.paramDetail withCompletionHandler:^(NSArray *response, NSError *error) {
         [weakSelf dismissHud];

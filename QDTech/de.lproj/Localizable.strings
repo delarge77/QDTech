@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  QDTech
+
+  Created by Alessandro dos santos pinto on 2/27/17.
+  Copyright © 2017 Alessandro dos Santos Pinto. All rights reserved.
+*/
+
+"NSError+QDTechError.buildConnectionProblemError" = "Kein Internet ! Bitte überprüfe deine Verbindung und versuche es erneut"
+"NSError+QDTechError.build400Error" = "Etwas ist schief gelaufen.";
+"NSError+QDTechError.build500Error" = "Tut mir leid, aber wir haben einige Serverprobleme. Bitte versuchen Sie es später noch einmal";
+"QDTechUsersViewController.LoadingResults" = "Benutzer geladen"
+"QDTechUserDetailViewController.LoadingDetailResults" = "Laden von Benutzerdetails"

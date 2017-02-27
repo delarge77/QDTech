@@ -30,6 +30,7 @@
 		8733DB841E635CF100F4ECEE /* QDTechUserDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB831E635CF100F4ECEE /* QDTechUserDetail.m */; };
 		8733DB871E63610D00F4ECEE /* QDTUserDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB861E63610D00F4ECEE /* QDTUserDetailTableViewCell.m */; };
 		8733DB8B1E63661F00F4ECEE /* NSError+QDTechError.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DB8A1E63661F00F4ECEE /* NSError+QDTechError.m */; };
+		8733DB951E6472AF00F4ECEE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8733DB971E6472AF00F4ECEE /* Localizable.strings */; };
 		DBE092F7EB7D63B03230E98C /* libPods-QDTech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F73942D5796A9E2166E7E6F /* libPods-QDTech.a */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,10 @@
 		8733DB861E63610D00F4ECEE /* QDTUserDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTUserDetailTableViewCell.m; path = views/cells/QDTUserDetailTableViewCell.m; sourceTree = "<group>"; };
 		8733DB891E63661F00F4ECEE /* NSError+QDTechError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+QDTechError.h"; path = "categories/NSError+QDTechError.h"; sourceTree = "<group>"; };
 		8733DB8A1E63661F00F4ECEE /* NSError+QDTechError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+QDTechError.m"; path = "categories/NSError+QDTechError.m"; sourceTree = "<group>"; };
+		8733DB961E6472AF00F4ECEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8733DB981E6472B300F4ECEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8733DB991E6472C600F4ECEE /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8733DB9C1E6472D400F4ECEE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8F73942D5796A9E2166E7E6F /* libPods-QDTech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QDTech.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992F261AA3B31F3A42F36919 /* libPods-QDTechTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QDTechTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C77AF49D149D9E402496E0B /* Pods-QDTechUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QDTechUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QDTechUITests/Pods-QDTechUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 			children = (
 				8733DB381E63135600F4ECEE /* Info.plist */,
 				8733DB281E63135600F4ECEE /* main.m */,
+				8733DB971E6472AF00F4ECEE /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -434,6 +440,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				"pt-BR",
 			);
 			mainGroup = 8733DB1B1E63135500F4ECEE;
 			productRefGroup = 8733DB251E63135600F4ECEE /* Products */;
@@ -453,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8733DB371E63135600F4ECEE /* LaunchScreen.storyboard in Resources */,
+				8733DB951E6472AF00F4ECEE /* Localizable.strings in Resources */,
 				8733DB341E63135600F4ECEE /* Assets.xcassets in Resources */,
 				8733DB321E63135600F4ECEE /* Main.storyboard in Resources */,
 			);
@@ -684,6 +693,17 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		8733DB971E6472AF00F4ECEE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8733DB961E6472AF00F4ECEE /* Base */,
+				8733DB981E6472B300F4ECEE /* en */,
+				8733DB991E6472C600F4ECEE /* de */,
+				8733DB9C1E6472D400F4ECEE /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -691,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -739,6 +760,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
