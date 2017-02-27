@@ -34,6 +34,8 @@
 		8733DBA21E647A9300F4ECEE /* QDTechUsersConnectionControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DBA11E647A9300F4ECEE /* QDTechUsersConnectionControllerTests.m */; };
 		8733DBA71E647F7100F4ECEE /* QDTechUserDetailsConnectionControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8733DBA61E647F7100F4ECEE /* QDTechUserDetailsConnectionControllerTests.m */; };
 		8733DBA91E6482A800F4ECEE /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 8733DBA81E6482A800F4ECEE /* users.json */; };
+		8763880A1E64A1790029FF5A /* posts.json in Resources */ = {isa = PBXBuildFile; fileRef = 876388091E64A1790029FF5A /* posts.json */; };
+		8763880D1E64A4A50029FF5A /* QDTechModelConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8763880C1E64A4A50029FF5A /* QDTechModelConverterTests.m */; };
 		DBE092F7EB7D63B03230E98C /* libPods-QDTech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F73942D5796A9E2166E7E6F /* libPods-QDTech.a */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +110,8 @@
 		8733DBA11E647A9300F4ECEE /* QDTechUsersConnectionControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUsersConnectionControllerTests.m; path = controllers/QDTechUsersConnectionControllerTests.m; sourceTree = "<group>"; };
 		8733DBA61E647F7100F4ECEE /* QDTechUserDetailsConnectionControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechUserDetailsConnectionControllerTests.m; path = controllers/QDTechUserDetailsConnectionControllerTests.m; sourceTree = "<group>"; };
 		8733DBA81E6482A800F4ECEE /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = users.json; path = fixtures/users.json; sourceTree = "<group>"; };
+		876388091E64A1790029FF5A /* posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = posts.json; sourceTree = "<group>"; };
+		8763880C1E64A4A50029FF5A /* QDTechModelConverterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QDTechModelConverterTests.m; path = models/converter/QDTechModelConverterTests.m; sourceTree = "<group>"; };
 		8F73942D5796A9E2166E7E6F /* libPods-QDTech.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QDTech.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992F261AA3B31F3A42F36919 /* libPods-QDTechTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QDTechTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C77AF49D149D9E402496E0B /* Pods-QDTechUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QDTechUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QDTechUITests/Pods-QDTechUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -366,6 +370,7 @@
 		8733DBA41E647B4500F4ECEE /* models */ = {
 			isa = PBXGroup;
 			children = (
+				8763880B1E64A4670029FF5A /* converter */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -374,8 +379,17 @@
 			isa = PBXGroup;
 			children = (
 				8733DBA81E6482A800F4ECEE /* users.json */,
+				876388091E64A1790029FF5A /* posts.json */,
 			);
 			name = fixtures;
+			sourceTree = "<group>";
+		};
+		8763880B1E64A4670029FF5A /* converter */ = {
+			isa = PBXGroup;
+			children = (
+				8763880C1E64A4A50029FF5A /* QDTechModelConverterTests.m */,
+			);
+			name = converter;
 			sourceTree = "<group>";
 		};
 		9D59BA35A5140F66C2F42322 /* Frameworks */ = {
@@ -521,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8733DBA91E6482A800F4ECEE /* users.json in Resources */,
+				8763880A1E64A1790029FF5A /* posts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +717,7 @@
 				8733DBA71E647F7100F4ECEE /* QDTechUserDetailsConnectionControllerTests.m in Sources */,
 				8733DBA01E6478BE00F4ECEE /* QDTConnectionClientTests.m in Sources */,
 				8733DBA21E647A9300F4ECEE /* QDTechUsersConnectionControllerTests.m in Sources */,
+				8763880D1E64A4A50029FF5A /* QDTechModelConverterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

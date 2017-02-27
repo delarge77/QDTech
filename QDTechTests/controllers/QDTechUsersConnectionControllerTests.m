@@ -104,24 +104,24 @@
                                                 statusCode:200 headers:@{@"Content-Type":@"application/json"}];
     }];
     
-//    XCTestExpectation *expectation = [self expectationWithDescription:@"Should be able to parse and return sessions"];
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Should be able to parse and return sessions"];
     NSURLSessionTask *task = [QDTechUsersConnectionController loadUsersViewModelWithOption:@"users" withCompletion:^(NSArray *response, NSError *error) {
-//        XCTAssertNil(error, @"Should be able to parse sessions without an error");
-//        XCTAssertEqual(10, response.count, @"should be able to parse all 10 sessions inside the fixture");
-//        NSMutableArray *sessionArray = [NSMutableArray array];
-//        for (QDTechUserItemViewModel *item in response) {
-//            [sessionArray addObject:item];
-//        }
-//        [sessionArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            XCTAssertTrue([obj isKindOfClass:[QDTechUserItemViewModel class]], @"Should have only QDTechUserItemViewModel objects inside response");
-//        }];
-//        [expectation fulfill];
+        XCTAssertNil(error, @"Should be able to parse sessions without an error");
+        XCTAssertEqual(10, response.count, @"should be able to parse all 10 sessions inside the fixture");
+        NSMutableArray *sessionArray = [NSMutableArray array];
+        for (QDTechUserItemViewModel *item in response) {
+            [sessionArray addObject:item];
+        }
+        [sessionArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            XCTAssertTrue([obj isKindOfClass:[QDTechUserItemViewModel class]], @"Should have only QDTechUserItemViewModel objects inside response");
+        }];
+        [expectation fulfill];
         
     }];
     
-//    [self waitForExpectationsWithTimeout:task.originalRequest.timeoutInterval handler:^(NSError *error) {
-//        [task cancel];
-//    }];
+    [self waitForExpectationsWithTimeout:task.originalRequest.timeoutInterval handler:^(NSError *error) {
+        [task cancel];
+    }];
 }
 
 @end
