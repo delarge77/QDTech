@@ -9,5 +9,5 @@
 "NSError+QDTechError.buildConnectionProblemError" = "Parece que você está sem internet! Por favor, verifique a sua conexão e tente novamente.";
 "NSError+QDTechError.build400Error" = "Houve algum erro com o seu pedido.";
 "NSError+QDTechError.build500Error" = "Desculpe, estamos enfrentando problemas técnicos. Por favor, tente novamente mais tarde.";
-"QDTechUsersViewController.LoadingResults" = "Carregando usuários"
-"QDTechUserDetailViewController.LoadingDetailResults" = "Carrregando detalhes do usuário"
+"QDTechUsersViewController.LoadingResults" = "Carregando usuários";
+"QDTechUserDetailViewController.LoadingDetailResults" = "Carrregando detalhes do usuário";

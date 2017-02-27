@@ -6,8 +6,8 @@
   Copyright © 2017 Alessandro dos Santos Pinto. All rights reserved.
 */
 
-"NSError+QDTechError.buildConnectionProblemError" = "No internet ! Please, check you connection and try again later"
+"NSError+QDTechError.buildConnectionProblemError" = "No internet ! Please, check you connection and try again later";
 "NSError+QDTechError.build400Error" = "Something went wrong.";
 "NSError+QDTechError.build500Error" = "Sorry but we are having some server problems . Please try again later";
-"QDTechUsersViewController.LoadingResults" = "Loading users"
-"QDTechUserDetailViewController.LoadingDetailResults" = "Loading users details"
+"QDTechUsersViewController.LoadingResults" = "Loading users";
+"QDTechUserDetailViewController.LoadingDetailResults" = "Loading users details";
